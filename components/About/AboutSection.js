@@ -29,7 +29,9 @@ const AboutSection = React.forwardRef(({ text }, ref) => {
             In my work, I strive to create intuitive and visually appealing
             interfaces that not only meet modern standards but also exceed user
             expectations. My experience spans both{" "}
-            <span className="font-bold text-zinc-300">WEB & MOBILE App's</span>{" "}
+            <span className="font-bold text-zinc-300">
+              WEB & MOBILE App&apos;s
+            </span>{" "}
             development, allowing me to deliver seamless and consistent user
             experiences across different platforms.
           </p>

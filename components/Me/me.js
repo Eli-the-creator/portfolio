@@ -23,10 +23,10 @@ const AboutMeSelf = () => {
             23 years old Software Engineer.
           </p>
           <p className="mt-2 text-zinc-500  text-md mb-4 laptop:text-[16px]">
-            You'll often find me exploring new hiking trails, experimenting with
-            recipes in the kitchen, or diving into tech and psychology books. I
-            believe that a balanced lifestyle enhances both my creativity and
-            productivity at work.
+            You&apos;ll often find me exploring new hiking trails, experimenting
+            with recipes in the kitchen, or diving into tech and psychology
+            books. I believe that a balanced lifestyle enhances both my
+            creativity and productivity at work.
           </p>
         </div>
       </div>

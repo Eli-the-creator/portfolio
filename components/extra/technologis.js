@@ -44,12 +44,12 @@ export default function TechBadge() {
         })}
         <span className="bg-neutral-100/10 hover:text-zinc-300 hover:bg-neutral-900/10 hover:border-slate-50/30 max-w-fit scale-250 border-[1px] transition-all duration-150 border-slate-50/10   py-[3.4px] px-4 rounded-full">
           I can use a lot more then just this, if you looking for something
-          spetial... LET'S TALK ;)
+          spetial... LET&apos;S TALK ;)
         </span>
       </div>
 
       <p className="text-center mt-3 text-neutral-500/50">
-        I'm always open for something new...
+        I&apos;m always open for something new...
       </p>
 
       <h3 className="text-2xl mt-8">Languages</h3>

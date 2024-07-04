@@ -283,7 +283,9 @@ const SkeletonFive = () => {
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-black"
       >
-        <p className="text-xs text-neutral-300">Don't worry, i gotcha you...</p>
+        <p className="text-xs text-neutral-300">
+          Don&apos;t worry, i gotcha you...
+        </p>
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
       </motion.div>
     </motion.div>
