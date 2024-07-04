@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { useTheme } from "next-themes";
 import data from "../../data/portfolio.json";
 

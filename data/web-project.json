@@ -1,0 +1,147 @@
+{
+  "project1": {
+    "id": 1,
+    "projectName": "Form builder",
+    "subTitle": "Drag & Drop page builder",
+    "img": "/form-builder/4.png",
+    "description": "Create a form by draging and dropping UI element, next safe and get uniq URL then share and collect real time data from your form",
+    "feature": [
+      "Drag & Drop builder",
+      "Safe your page in the DataBase",
+      "Auth (Clerk)",
+      "Backend logic, safe page and collecting response",
+      "Dark/Light mode "
+    ],
+    "modalImg": [
+      {
+        "src": "/form-builder/4.png"
+      },
+      {
+        "src": "/form-builder/5.png"
+      },
+      {
+        "src": "/form-builder/7.png"
+      },
+      {
+        "src": "/form-builder/8.png"
+      },
+      {
+        "src": "/form-builder/9.png"
+      },
+      {
+        "src": "/form-builder/6.png"
+      }
+    ],
+    "modalDescription": "Zduduj forme w przyjaznym UI, przeciagajac bloki. Nastepnie zapisz zmiany i opublikuj. Dostaniesz URL-swojej strony ktorę moesz wysyłać i zbierać danne dotyczące twojej ankiety ",
+    "gitHubURL": "https://github.com/Eli-the-creator/form-builder",
+    "caseURL": "https://form-builder-blush.vercel.app/sign-in?redirect_url=https%3A%2F%2Fform-builder-blush.vercel.app%2F"
+  },
+  "project2": {
+    "id": 2,
+    "projectName": "LMS Platform",
+    "subTitle": "Fully functional learning platform, upload and sell. ",
+    "img": "/lms/1.png",
+    "description": "PlanetScale remove free hobby plan (THIS PROJECT IS CURRENTLY NOT AVAILABLE, but you can check my the source code on my GitHub)",
+    "feature": [
+      "Next-JS",
+      "MUX Video",
+      "Prisma",
+      "API Route protection",
+      "MySQL (PlanetScale)",
+      "Dashboard, sells stats",
+      "Friendly upload UI",
+      "Drag and Drop chapters reorder ",
+      "Stripe WebHook",
+      "Performance optimization"
+    ],
+    "modalImg": [
+      {
+        "src": "/lms/1.png"
+      },
+      {
+        "src": "/lms/2.png"
+      },
+      {
+        "src": "/lms/3.png"
+      },
+      {
+        "src": "/lms/4.jpeg"
+      }
+    ],
+    "modalDescription": "Zduduj forme w przyjaznym UI, przeciagajac bloki. Nastepnie zapisz zmiany i opublikuj. Dostaniesz URL-swojej strony ktorę moesz wysyłać i zbierać danne dotyczące twojej ankiety ",
+    "gitHubURL": "https://github.com/Eli-the-creator/lms-fullstack",
+    "caseURL": "https://lms-no-hustle.vercel.app/search"
+  },
+  "project3": {
+    "id": 3,
+    "projectName": "Sanity/Stripe E-commerce",
+    "subTitle": "Simple store. Payments test mode on",
+    "img": "/sanity/1.png",
+    "description": "Simple fully functional store, (Stripe test mode, so you can try my webhook)",
+    "feature": [
+      "Next-JS",
+      "TypeScript",
+      "Stripe",
+      "Sanity",
+      "useShoppingCart",
+      "GROQ"
+    ],
+    "modalImg": [
+      { "src": "/sanity/1.png" },
+      { "src": "/sanity/2.png" },
+      { "src": "/sanity/3.png" },
+      { "src": "/sanity/4.png" },
+      { "src": "/sanity/5.png" }
+    ],
+    "modalDescription": "",
+    "gitHubURL": "https://github.com/Eli-the-creator/NextJS-E-Commerce/tree/main",
+    "caseURL": "https://ez-store-eight.vercel.app/"
+  },
+  "project4": {
+    "id": 4,
+    "projectName": "CRUD GraphQL",
+    "subTitle": "Full-stack CRUD web-app with GraphQL",
+    "img": "/project-graphql/1.png",
+    "description": "Practice make perfect, Full-stack CRUD web-app with GraphQl (This project is not online but you can check source code on my GitHub)",
+    "feature": [
+      "ReactJS",
+      "GraphQL",
+      "Apollo Client",
+      "Apollo Server",
+      "Node JS",
+      "Express JS"
+    ],
+    "modalImg": [
+      { "src": "/project-graphql/1.png" },
+      { "src": "/project-graphql/2.png" },
+      { "src": "/project-graphql/3.png" }
+    ],
+    "modalDescription": "",
+    "gitHubURL": "https://github.com/Eli-the-creator/GraphQL-LMS-HYGRAPH",
+    "caseURL": "https://github.com/Eli-the-creator/GraphQL-LMS-HYGRAPH"
+  },
+  "project5": {
+    "id": 5,
+    "projectName": "Product Marketplace",
+    "subTitle": "This project is in development now.",
+    "img": "/digital-shop/3.png",
+    "description": "This project is in development now. ALL Links is connected to my GitHub profile. ",
+    "feature": [
+      "NextJS",
+      "tRPC",
+      "useShoppingCart",
+      "Customer dashboard",
+      "Admin dashboard, full access to all product in case to verify",
+      "Get paid for your product"
+    ],
+    "modalImg": [
+      { "src": "/digital-shop/3.png" },
+      { "src": "/digital-shop/4.png" },
+      { "src": "/digital-shop/5.png" },
+      { "src": "/digital-shop/7.png" }
+    ],
+    "modalDescription": "",
+    "gitHubURL": "https://github.com/Eli-the-creator",
+    "caseURL": "https://github.com/Eli-the-creator"
+  }
+}

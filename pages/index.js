@@ -1,28 +1,38 @@
 import { useRef } from "react";
 import Header from "../components/Header";
-import ServiceCard from "../components/ServiceCard";
-import Socials from "../components/Socials";
+import { BentoGridTwoColomns } from "../components/ServiceCard";
 import WorkCard from "../components/WorkCard";
-import { useIsomorphicLayoutEffect } from "../utils";
-import { stagger } from "../animations";
 import Footer from "../components/Footer";
 import Head from "next/head";
 import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
+import AboutMeSelf from "../components/Me/me";
+//
 
 // Local Data
 import data from "../data/portfolio.json";
-import { TracingBeam } from "../components/extra/tracing-beam";
+import webProjectsDate from "../data/web-project.json";
+import mobileProject from "../data/mobile-project.json";
+import AboutSection from "../components/About/AboutSection";
+import TechBadge from "../components/extra/technologis";
+import { motion } from "framer-motion";
+
+// Helpers
+import {
+  getPreviewData,
+  normilizaDataObject,
+  normilizeAndMergeObject,
+} from "../utils/helpers";
+
+// Helpers Normalize JSON Objet to JS Array of Object with id
+const PROJECT_DATA = normilizeAndMergeObject(webProjectsDate, mobileProject);
+const PREVIEW_PROJECT_DATA = getPreviewData(PROJECT_DATA);
 
 export default function Home() {
   // Ref
   const workRef = useRef();
   const aboutRef = useRef();
-  const textOne = useRef();
-  const textTwo = useRef();
-  const textThree = useRef();
-  const textFour = useRef();
 
   // Handling Scroll
   const handleWorkScroll = () => {
@@ -35,22 +45,18 @@ export default function Home() {
 
   const handleAboutScroll = () => {
     window.scrollTo({
-      top: aboutRef.current.offsetTop,
+      top: aboutRef.current.offsetTop - 200,
       left: 0,
       behavior: "smooth",
     });
   };
 
-  useIsomorphicLayoutEffect(() => {
-    stagger(
-      [textOne.current, textTwo.current, textThree.current, textFour.current],
-      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
-      { y: 0, x: 0, transform: "scale(1)" }
-    );
-  }, []);
-
   return (
-    <div className={`relative ${data.showCursor && "cursor-none"}`}>
+    <div
+      className={`relative antialiased pixelated cursor-none ${
+        data.showCursor && "cursor-none"
+      }`}
+    >
       {data.showCursor && <Cursor />}
       <Head>
         <title>{data.name}</title>
@@ -58,115 +64,87 @@ export default function Home() {
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
 
-      <div className="backdrop-blur-md border-b-[0.1px]  transition-all pr-4 pl-2 border-white/10 duration-75 sticky top-0 z-[1000]">
+      <div className="backdrop-blur-md border-b  border-neutral-100/10 transition-all pr-4 pl-2 duration-75 sticky top-0 z-[1000] ">
         <Header
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
         />
       </div>
-      <div className="container mx-auto mb-10 ">
-        <div className="laptop:mt-20 mt-10">
-          <div className="mt-5">
-            <h1
-              ref={textOne}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
+
+      <div className="container mx-auto mb-10  text-zinc-400">
+        <div className="flex justify-center items-center relative h-[50vh] mt-32 ">
+          <div className="mt-5 flex flex-col justify-center items-center  z-[100]">
+            <motion.p
+              initial={{ opacity: 0, y: 2, filter: "blur(9px)" }}
+              animate={{ opacity: 1, y: 2, filter: "blur(0px)" }}
+              transition={{
+                delay: 0.4,
+                duration: 0.9,
+              }}
+              className="flex mb-1 text-md mob:text-md  mob:font-medium laptop:text-xl bg-gradient-to-b from-zinc-50 to-black bg-clip-text text-transparent"
             >
+              Front-end & App Developer
+            </motion.p>
+
+            <h1 className="text-5xl font-[500] text-center text-zinc-200/90 tablet:text-7xl laptop:text-6xl desktop:text-8xl laptopl:text-8xl ">
               {data.headerTaglineOne}
             </h1>
-            <h1
-              ref={textTwo}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineTwo}
-            </h1>
-            <h1
-              ref={textThree}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineThree}
-            </h1>
-            <h1
-              ref={textFour}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineFour}
-            </h1>
+
+            <motion.div
+              initial={{ opacity: 0, y: 2, filter: "blur(12px)" }}
+              animate={{ opacity: 1, y: 2, filter: "blur(10px)" }}
+              transition={{
+                delay: 0.4,
+                duration: 0.9,
+              }}
+              className=" bg-gradient-to-r from-transparent via-purple-300/90 to-transparent h-[3.2px] w-1/2 blur-sm"
+            />
+            <motion.div
+              initial={{ opacity: 0, y: 2, filter: "blur(2px)" }}
+              animate={{ opacity: 1, y: 2, filter: "blur(0px)" }}
+              transition={{
+                delay: 0.8,
+                duration: 0.6,
+              }}
+              className=" bg-gradient-to-r from-transparent via-indigo-400/70 to-transparent h-px w-full"
+            />
           </div>
-
-          <Socials className="mt-2 laptop:mt-5" />
-        </div>
-        <div className=" mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
-
-          <div className="flex laptop:flex-row justify-between tablet:flex-col mob:flex-col gap-4 mt-5 p-4 w-full">
-            <div className="w-full h-full rounded-xl p-4 border-[0.4px] border-slate-100/10">
-              <div className="">
-                <h3 className="text-xl italic pb-4 pl-2">Experience.</h3>
-              </div>
-              <div className="flex flex-col gap-4">
-                <div className="border border-slate-100/50 p-4 rounded-2xl">
-                  a
-                </div>
-                <div className="border-slate-100/50 border-[0.1px] p-4 rounded-2xl">
-                  a
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full rounded-xl p-4 border-[0.4px] border-slate-100/10">
-              <div className="">
-                <h3 className="text-xl italic pb-4 pl-2">Experience.</h3>
-              </div>
-              <div className="flex flex-col gap-4">
-                <div className="border border-slate-100/50 p-4 rounded-2xl">
-                  a
-                </div>
-                <div className="border-slate-100/50 border-[0.1px] p-4 rounded-2xl">
-                  a
-                </div>
-                <div className="border-slate-100/50 border-[0.1px] p-4 rounded-2xl">
-                  a
-                </div>
-                <div className="border-slate-100/50 border-[0.1px] p-4 rounded-2xl">
-                  a
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-            {data.aboutpara}
-          </p> */}
         </div>
 
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <h1 className="text-2xl text-bold">Work.</h1>
+        <AboutSection ref={aboutRef} text={data.aboutpara} />
+        <AboutMeSelf />
 
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
-            {data.projects.map((project) => (
+        <div className="mt-40">
+          <h3 className="text-2xl text-center tablet:text-4xl laptop:text-4xl desktop:text-5xl mb-20 ">
+            Achievements.
+          </h3>
+          <BentoGridTwoColomns />
+        </div>
+
+        <div className="pt-64">
+          <h3 className="text-center mb-4 text-5xl">Main tech stack</h3>
+
+          <TechBadge />
+        </div>
+
+        <div className="pt-64 laptop:mt-32 p-2 laptop:p-0 " ref={workRef}>
+          <h1 className="tablet:m-10 text-2xl tablet:text-4xl laptop:text-4xl desktop:text-5xl laptopl:text-5xl ">
+            Showcase.
+          </h1>
+
+          <div className="mt-5 laptop:mt-10 flex flex-wrap justify-center mx-auto ">
+            {PREVIEW_PROJECT_DATA.map((project) => (
               <WorkCard
                 key={project.id}
-                img={project.imageSrc}
-                name={project.title}
-                description={project.description}
-                onClick={() => window.open(project.url)}
+                img={project.img}
+                name={project.projectName}
+                description={""}
+                onClick={() => window.open("/about-project/" + project.id)}
               />
             ))}
           </div>
         </div>
 
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
-          <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
-            {data.services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                name={service.title}
-                description={service.description}
-              />
-            ))}
-          </div>
-        </div>
         {/* This button should not go into production */}
         {process.env.NODE_ENV === "development" && (
           <div className="fixed bottom-5 right-5">
@@ -175,7 +153,6 @@ export default function Home() {
             </Link>
           </div>
         )}
-
         <Footer />
       </div>
     </div>

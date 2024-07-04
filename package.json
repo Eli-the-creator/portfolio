@@ -9,7 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@coreui/coreui": "^5.0.2",
+    "@coreui/react": "^5.1.0",
     "@headlessui/react": "^1.6.6",
+    "@react-three/drei": "^9.107.3",
+    "@react-three/fiber": "^8.16.8",
+    "@tabler/icons-react": "^3.7.0",
     "autoprefixer": "^10.4.7",
     "clsx": "^2.1.1",
     "custom-cursor-react": "^1.0.5",
@@ -24,13 +29,17 @@
     "react-datepicker": "^4.8.0",
     "react-dom": "18.1.0",
     "react-markdown": "^8.0.3",
+    "react-multi-carousel": "^2.8.5",
     "react-syntax-highlighter": "^15.5.0",
     "react-textarea-autosize": "^8.3.4",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
     "styled-components": "^5.3.5",
+    "swiper": "^11.1.4",
     "tailwind-merge": "^2.3.0",
     "tailwindcss": "^3.0.24",
+    "three": "^0.166.0",
+    "three-globe": "^2.31.1",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@ const Cursor = () => {
     if (theme.theme === "dark") {
       return "#fff";
     } else if (theme.theme === "light") {
-      return "#000";
+      return "#fff";
     }
   };
 
@@ -24,7 +24,7 @@ const Cursor = () => {
         <CustomCursor
           targets={[".link"]}
           customClass="custom-cursor"
-          dimensions={30}
+          dimensions={40}
           fill={getCusomColor()}
           smoothness={{
             movement: 0.2,

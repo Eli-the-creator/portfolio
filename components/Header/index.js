@@ -19,10 +19,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
   return (
     <>
-      <Popover className="block items-center tablet:hidden mt-5">
+      <Popover className="block items-center tablet:hidden ">
         {({ open }) => (
           <>
-            <div className="flex items-center justify-between h-[52px] laptop:p-0 ">
+            <div className="flex items-center justify-between laptop:p-0 ">
               <h1
                 onClick={() => router.push("/")}
                 className="font-medium p-2 laptop:p-0 link"
@@ -49,15 +49,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 <Popover.Button>
                   <img
                     className="h-5"
-                    src={`/images/${
-                      !open
-                        ? theme === "dark"
-                          ? "menu-white.svg"
-                          : "menu.svg"
-                        : theme === "light"
-                        ? "cancel.svg"
-                        : "cancel-white.svg"
-                    }`}
+                    src={`/images/${"menu-white.svg"}`}
                   ></img>
                 </Popover.Button>
               </div>
@@ -78,7 +70,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   {showResume && (
                     <Button
                       onClick={() =>
-                        window.open("mailto:hello@chetanverma.com")
+                        window.open("mailto:neverlookbackeli@gmail.com")
                       }
                     >
                       Resume
@@ -86,7 +78,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
+                    onClick={() =>
+                      window.open("mailto:neverlookbackeli@gmail.com")
+                    }
                   >
                     Contact
                   </Button>
@@ -109,7 +103,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
+                    onClick={() =>
+                      window.open("mailto:neverlookbackeli@gmail.com")
+                    }
                   >
                     Contact
                   </Button>
@@ -120,7 +116,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         )}
       </Popover>
       <div
-        className={`mt-10 hidden flex-row items-center pl-6 pr-6 rounded-t-xl rounded-b-none h-20 justify-between sticky ${
+        className={`hidden flex-row items-center pl-6 pr-6 rounded-t-xl rounded-b-none h-20 justify-between sticky ${
           theme === "light" && "bg-white"
         } dark:text-white top-0 z-10 tablet:flex`}
       >
@@ -146,8 +142,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
-              Contact
+            <Button
+              className=""
+              onClick={() => window.open("mailto:neverlookbackeli@gmail.com")}
+            >
+              Email Me.
             </Button>
             {mounted && theme && data.darkMode && (
               <Button
@@ -175,7 +174,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
+            <Button
+              onClick={() => window.open("mailto:neverlookbackeli@gmail.com")}
+            >
               Contact
             </Button>
 

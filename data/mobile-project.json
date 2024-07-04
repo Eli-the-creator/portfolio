@@ -1,0 +1,41 @@
+{
+  "mobileProject1": {
+    "projectName": "Podify - podcast app",
+    "subTitle": "Like Spotify, but better",
+    "img": "/podify/1.png",
+    "feature": [
+      "MongoDB ",
+      "Express API",
+      "React Native (bare-flow)",
+      "OTP Auth (Express API) - Email verification",
+      "Mailtrap - for email",
+      "React Track Player",
+      "Plalist, Favorit-Audio, History... and many more "
+    ],
+    "modalImg": [{ "src": "/podify/1.png" }],
+    "modalDescription": "Zduduj forme w przyjaznym UI, przeciagajac bloki. Nastepnie zapisz zmiany i opublikuj. Dostaniesz URL-swojej strony ktorę moesz wysyłać i zbierać danne dotyczące twojej ankiety ",
+    "gitHubURL": "https://github.com/Eli-the-creator/podify-podcast-app-"
+  },
+  "mobileProject2": {
+    "projectName": "WhatsApp - Clone (FireBase)",
+    "subTitle": "Google Firebase Live DB, EXPO",
+    "img": "/whathapp/3.png",
+    "description": "Full-stack application, Fully functional WhatsApp Clone",
+    "feature": [
+      "Firebase ",
+      "EXPO",
+      "Camera API",
+      "Auth (Firebase)",
+      "Push notification",
+      "Real time chat",
+      "Groupe Chat, Profile customization, Message replies "
+    ],
+    "modalImg": [
+      { "src": "/whathapp/1.png" },
+      { "src": "/whathapp/2.png" },
+      { "src": "/whathapp/3.png" }
+    ],
+    "modalDescription": "Zduduj forme w przyjaznym UI, przeciagajac bloki. Nastepnie zapisz zmiany i opublikuj. Dostaniesz URL-swojej strony ktorę moesz wysyłać i zbierać danne dotyczące twojej ankiety ",
+    "gitHubURL": "https://github.com/Eli-the-creator/WhatsApp-Clone-RN-FireBase"
+  }
+}
